@@ -9,7 +9,7 @@ string ReadString()
 	getline(cin, S1);
 	return S1;
 }
-void PrintEachWordInString(string S1)
+short  PrintEachWordInString(string S1)
 {
 	string delim = " "; // delimiter
 	cout << "\nNumber of Words: \n\n";
@@ -31,8 +31,10 @@ void PrintEachWordInString(string S1)
 	{
 		cout << Count++ << endl;
 	}
+
+	return Count;
 }
 int main()
 {
-	PrintEachWordInString(ReadString());
+	cout<<PrintEachWordInString(ReadString());
 }
