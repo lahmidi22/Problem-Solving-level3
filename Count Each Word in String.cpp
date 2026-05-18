@@ -12,8 +12,9 @@ string ReadString()
 void PrintEachWordInString(string S1)
 {
 	string delim = " "; // delimiter
-	cout << "\nYour string words are: \n\n";
+	cout << "\nNumber of Words: \n\n";
 	short pos = 0;
+	short Count = 0;
 	string sWord; 
 	
 	while ((pos = S1.find(delim)) != std::string::npos)
@@ -21,14 +22,14 @@ void PrintEachWordInString(string S1)
 		sWord = S1.substr(0, pos); 
 		if (sWord != "")
 		{
-			cout << sWord << endl;
+			Count++;
 		}
 		S1.erase(0, pos + delim.length()); /* erase() until
 		positon and move to next word. */
 	}
 	if (S1 != "")
 	{
-		cout << S1 << endl; 
+		cout << Count++ << endl;
 	}
 }
 int main()
